@@ -25,5 +25,5 @@ DO NOT use a recursive solution to this problem. Your solution must run in linea
 
 
 nthFibonacci = function(n) {  
- // your code here
+	n < 2 ? n : nthFibonacci(n-1)+nthFibonacci(n-2)
 };
