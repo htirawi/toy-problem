@@ -10,7 +10,19 @@
  * console.log(index); // 4
  */
 
-var binarySearch = function (array, target) {
-  
-};
+ var binarySearch = function (array, target) {
 
+ 	var min = 0;
+ 	var max = array.length - 1;
+ 	var  pivot = Math.floor((min + max) / 2);
+ 	while (min <= max) {
+ 		if (array[pivot] < target) {
+ 			min = pivot + 1;
+ 		} else if (array[pivot] > target) {
+ 			max = pivot - 1;
+ 		} else {
+ 			return pivot;
+ 		}
+ 	}
+ 	return -1;
+ };
