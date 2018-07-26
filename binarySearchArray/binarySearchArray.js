@@ -11,18 +11,22 @@
  */
 
  var binarySearch = function (array, target) {
-
- 	var min = 0;
- 	var max = array.length - 1;
- 	var  pivot = Math.floor((min + max) / 2);
- 	while (min <= max) {
- 		if (array[pivot] < target) {
- 			min = pivot + 1;
- 		} else if (array[pivot] > target) {
- 			max = pivot - 1;
- 		} else {
- 			return pivot;
+ 	debugger;
+ 	var left = 0;
+ 	var right = array.length-1;
+ 	var mid = Math.floor((left+right)/2);
+ 	while(array[mid] != target && left < right){
+ 		if(target < array[mid]){
+ 			right = mid - 1;
  		}
+ 		if(target > array[mid]){
+ 			left = mid + 1;
+ 		}
+ 		mid = Math.floor((left+right)/2)
  	}
- 	return -1;
+ 	if(array[mid] !== target){
+ 		return -1
+ 	}else {
+ 		return mid;
+ 	}
  };
