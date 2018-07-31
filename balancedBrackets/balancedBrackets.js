@@ -15,5 +15,19 @@
 function isBalanced (str) {
   // Write your code here, and
   // return your final answer.
-}
 
+  var stack = [];
+  var openBrackets = { '{': '}', '[': ']', '(': ')' };
+  var closedBrackets = { '}': true, ']': true, ')': true };
+  
+  for (var i = 0; i < str.length; i ++) {
+  	var chr = str[i];
+  	if (openBrackets[chr]) {
+  		stack.push(chr);
+  	} else if (closedBrackets[chr]) {
+  		if (openBrackets[stack.pop()] !== chr) return false;
+  	}
+  }
+  
+  return stack.length === 0;
+};
