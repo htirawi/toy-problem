@@ -8,5 +8,17 @@
 //NOTE: DO NOT use JavaScript’s built-in sorting function (Array.prototype.sort).
 var bubbleSort = function(array) {
 	
+	for(var i = 0 ; i < array.length;i++){
+		for(var j = 0 ; j < array.length;j++){
+			if(array[j] > array[j+1]){
+				var p = array[j];
+				array[j] = array[j+1];
+				array[j+1] = p;
+
+			}
+		}
+	}
+	return array;
 };
+
 
