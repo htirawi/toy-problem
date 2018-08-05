@@ -12,8 +12,20 @@
 
 
 function evenOccurrence (arr) {
-  // Write your code here, and
-  // return your final answer.
+	var obj = {};
+
+	arr.forEach(function(value, index) {
+		obj[value] = obj[value] + 1 || 1;
+	});
+
+	for (var i = 0; i < arr.length; i++) {
+		var eleemnt = arr[i];
+
+		if (obj[eleemnt] % 2 === 0) {
+			return eleemnt;
+		}
+	}
+	return null;
 }
 
 
