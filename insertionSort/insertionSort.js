@@ -16,8 +16,25 @@ A stable sort must return {value: 5, order: 1}, {value:5, order: 2} in that orde
 //output:[ { "value": 5, "order": 1 }, { "value": 5, "order": 2 }, { "value": 10 } ]
 
 function insertionSort (array) {
-  // Write your code here, and
-  // return your final answer.
-  
+
+	var smallest ;
+	for(var i = 0 ; i < array.length;i++){
+		for(var j = 0 ; j < array.length;j++){
+			if(array[i].value < array[j].value){
+				smallest = array[j];
+				array[j] = array[i];
+				array[i] = smallest;
+				
+			}
+			if(array[i].order < array[j].order){
+				smallest = array[j];
+				array[j] = array[i];
+				array[i] = smallest;
+			}
+		}
+		
+	}
+	return array
 }
+
 
