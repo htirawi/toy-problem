@@ -16,6 +16,18 @@ E -> D -> C -> B -> A -> null
 
 ‘Constraint 3: Do not mutate the original nodes by adding any new properties */
 var reverseLinkedList = function(node) {
-	
+	// This code is not complete
+	var node = linkedList;
+	var prev = null;
+	var next;
+
+	while(!node){
+
+		next = node.next;
+		node.next = prev;
+
+	}
+
+	return prev;
 }
 
