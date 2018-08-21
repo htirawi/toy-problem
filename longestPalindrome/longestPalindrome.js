@@ -10,8 +10,19 @@ string:
 "aibohphobia"	                  "aibohphobia"
 string:
 "My dad is a racecar athlete"	  "a racecar a" */
-
 function longestPalindrome (string) {
   // Write your code here, and
   // return your final answer.
+  var longest = '';
+  for(var i =0; i<string.length; i++){
+  	for(var j = 0; j<=string.length; j++){
+  		if(string.slice(i,j) === string.slice(i,j).split("").reverse().join('')){
+  			if(string.slice(i,j).length > longest.length){
+  				longest = string.slice(i,j);
+  			}
+  		}
+  	}
+  }
+  return longest;
 }
+
