@@ -39,7 +39,27 @@ ____________________________
 */
 
 function anagramPosition (string) {
-  // Write your code here, and
-  // return your final answer.
+	var stringLetters = string.split('').sort().join('');
+	let result = '';
+	var anagRank = 0;
+	//IIFE
+	(function makeAnagram (anagram, str) {
+
+		if (anagram.length === stringLetters.length) {
+			if (result !== anagram) { 
+				anagRank++;
+				result = anagram
+				return result; 
+			}
+		}
+		for (let i = 0; i < stringLetters.length; i++) {
+			if (result.indexOf(string) + 1 !== 0) { 
+				break;
+			} else if (str.indexOf(i.toString()) === -1) {
+				makeAnagram(anagram + stringLetters[i], str + i.toString());
+			}
+		}
+	}('', ''));
+	return anagRank;
 }
 
