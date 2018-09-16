@@ -63,3 +63,32 @@ function anagramPosition (string) {
 	return anagRank;
 }
 
+
+
+
+// function anagramPosition (string) {
+//   var letters = string.split('').sort().join('');
+//   let result = '';
+//   var indexCounter = 0;
+//   (function makeAnagram (anagram, cache) {
+//     console.log('indexCounter ', indexCounter)
+//     //console.log('result.indexOf(string) + 1', result.indexOf(string) + 1);
+//     if (anagram.length === letters.length) {
+//       if (result !== anagram) { 
+//         indexCounter++;
+//         result = anagram
+//         return result; 
+//       }
+//     }
+//     for (let i = 0; i < letters.length; i++) {
+//       if (result.indexOf(string) + 1 !== 0) { 
+//         //console.log('found it');
+//         break;
+//       } else if (cache.indexOf(i.toString()) === -1) { makeAnagram(anagram + letters[i], cache + i.toString()); }
+//     }
+//   }('', ''));
+//   // console.log(result.length);
+//   return indexCounter;
+// }
+
+// console.log(anagramPosition('stark'));
