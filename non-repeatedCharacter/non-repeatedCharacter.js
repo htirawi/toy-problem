@@ -22,4 +22,13 @@ string:
 
 function firstNonRepeatedCharacter (string) {
    // write your code here
+   for(var i = 0;  i < string.length; i++){
+   	if(string.split(string[i]).length===2){
+   		return string[i]
+   		
+   	}
+   }
+
+
+   return "sorry"
 }
